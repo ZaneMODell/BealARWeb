@@ -108,20 +108,17 @@ public class ModelViewManager : MonoBehaviour
             m_InstantiatedPlantPrefab = Instantiate(m_PlantPrefab, m_PlantInstantiationPoint.position, 
                 m_PlantInstantiationPoint.rotation, m_PlantInstantiationPoint);
 
-            //Scale it up (for now, may need to change this later), and set the proper rotation (again may change this later)
-            m_InstantiatedPlantPrefab.transform.localScale = Vector3.one * 20;
-            m_InstantiatedPlantPrefab.transform.eulerAngles = new Vector3(m_InstantiatedPlantPrefab.transform.eulerAngles.x - 90,
-                m_InstantiatedPlantPrefab.transform.eulerAngles.y, m_InstantiatedPlantPrefab.transform.eulerAngles.z);
-
-            //Gets the mesh and determines its width and height
-            MeshFilter meshFilter = m_InstantiatedPlantPrefab.GetComponentInChildren<MeshFilter>();
-            modelHeight = meshFilter.mesh.bounds.extents.y;
-            modelWidth = meshFilter.mesh.bounds.extents.x;
+            MeshRenderer meshRenderer = m_InstantiatedPlantPrefab.GetComponentInChildren<MeshRenderer>();
+            modelHeight = meshRenderer.bounds.size.y;
+            modelWidth = meshRenderer.bounds.size.x;
 
             //Set the model camera and the zoom bound transforms according to the height of the prefab mesh
-            m_ModelCamera.transform.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, 0, modelHeight * 1000);
-            m_CamZoomInnerBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, 0, modelHeight * 100);
-            m_CamZoomOuterBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, 0, modelHeight * 3000);
+            m_ModelCamera.transform.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -modelHeight, modelHeight * 5);
+            m_CamZoomInnerBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -5, modelHeight * 2);
+            m_CamZoomOuterBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -5, modelHeight * 10);
+
+            m_ModelCamera.transform.rotation = Quaternion.LookRotation(m_InstantiatedPlantPrefab.transform.position -
+                m_ModelCamera.transform.position,Vector3.up);
 
             //Calculate the distances from the prefab for rotation purposes
             m_ModelCameraInput.m_CamDistanceFromModel = Mathf.Abs(m_ModelCamera.transform.position.z - m_InstantiatedPlantPrefab.transform.position.z);
