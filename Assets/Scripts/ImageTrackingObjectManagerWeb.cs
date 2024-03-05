@@ -160,6 +160,7 @@ public class ImageTrackingObjectManagerWeb : MonoBehaviour
     public void DisableARCanvas()
     {
         m_ARCanvas.SetActive(false);
+        testText.text = "";
     }
 
     public void DisableARCanvasIfARMode()
@@ -173,7 +174,12 @@ public class ImageTrackingObjectManagerWeb : MonoBehaviour
     public void UpdateInfo()
     {
         GameObject plantObject = resourceManager.imageTracker.GetTrackedObject();
+        //plantObject.transform.position = resourceManager.imageTracker.gameObject.transform.position + new Vector3(0, 0, 5);
         string plantName = plantObject.name;
+        testText.text += "Object name: " + plantName + '\n';
+        testText.text += "Object position: " + plantObject.transform.position + '\n';
+        testText.text += "Object scale: " + plantObject.transform.localScale + '\n';
+        testText.text += "Camera position: " + Camera.main.transform.position + '\n';
         Debug.Log(plantName);
         if (plantName != null)
         {

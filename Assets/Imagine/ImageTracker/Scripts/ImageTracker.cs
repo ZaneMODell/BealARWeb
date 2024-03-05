@@ -56,7 +56,7 @@ namespace Imagine.WebAR
 
             if(trackerCam == null)
             {
-                trackerCam = GameObject.FindObjectOfType<ImageTrackerCamera>();
+                trackerCam = FindObjectOfType<ImageTrackerCamera>();
             }
 
             foreach (var i in imageTargets)
@@ -174,7 +174,7 @@ namespace Imagine.WebAR
                 return;
 
             currentTrackedObject = targets[id].transform.GetChild(0).gameObject;
-
+            currentTrackedObject.transform.parent.gameObject.SetActive(true);
             currentTrackedObject.SetActive(true);
             
             if(!trackedIds.Contains(id))

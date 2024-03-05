@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WebARScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/Scenes/MaybeThisWorks.unity
+    guid: b657f485c92247c49881554b286e0125
   m_configObjects: {}
