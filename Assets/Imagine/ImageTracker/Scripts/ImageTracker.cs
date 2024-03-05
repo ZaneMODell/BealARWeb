@@ -46,6 +46,8 @@ namespace Imagine.WebAR
         [SerializeField] [Range(.025f, 0.100f)] private float debugCamMoveSensitivity = 0.1f;
         [SerializeField] [Range(0.5f, 1.0f)] private float debugCamTiltSensitivity = 1f;
 
+        private GameObject currentTrackedObject;
+
         IEnumerator Start()
         {
             if(transform.parent != null) {
@@ -129,6 +131,11 @@ namespace Imagine.WebAR
 
 #endif
         }
+
+        public GameObject GetTrackedObject()
+        {
+            return currentTrackedObject;
+        }
         
         public List<string> GetTrackedIDs()
         {
@@ -166,7 +173,10 @@ namespace Imagine.WebAR
             if (!targets.ContainsKey(id))
                 return;
 
-            targets[id].transform.gameObject.SetActive(true);
+            currentTrackedObject = targets[id].transform.GetChild(0).gameObject;
+
+            currentTrackedObject.transform.parent.gameObject.SetActive(true);
+            currentTrackedObject.SetActive(true);
             
             if(!trackedIds.Contains(id))
                 trackedIds.Add(id);
