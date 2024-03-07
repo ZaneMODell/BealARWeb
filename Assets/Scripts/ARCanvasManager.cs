@@ -78,35 +78,7 @@ public class ARCanvasManager : MonoBehaviour
     #endregion
 
     #region Methods
-    #region Unity Methods
-    /// <summary>
-    /// Unity method called on scene load
-    /// </summary>
-    private void Awake()
-    {
-        //Sets Color to be black with 100% alpha
-        //m_FadeImage.color = new Color(0, 0, 0, alpha);
-    }
-    /// <summary>
-    /// Method called once every frame
-    /// </summary>
-    private void Update()
-    {
-        //Handles m_SpriteImage fade in
-        //if (m_FadeImage)
-        //{
-        //    if (Time.time > 1)
-        //    {
-        //        m_FadeImage.color = new Color(0, 0, 0, alpha);
-        //        alpha -= Time.deltaTime * 5;
-        //    }
-        //    if (alpha <= 0)
-        //    {
-        //        m_FadeImage = null;
-        //    }
-        //}
-    }
-    #endregion
+    
     #region Custom Methods
     /// <summary>
     /// Function that enables the model viewer mode via a UI Button Press

@@ -104,18 +104,30 @@ public class ModelViewManager : MonoBehaviour
         if (!m_ModelSet /*&& m_ViewManager.m_ViewState == ViewManager.ViewState.Model*/)
         {
             //Get the prefab to set in the model view and instantiate it
+
+            Vector3 offset = Vector3.zero;
+
+            Vector3 rotationOffset = Vector3.zero;
+
+            if (plantPrefab.name == "SnowTrillium")
+            {
+                offset = new Vector3(-.975f, 0, -.07f);
+                rotationOffset = new Vector3(90, 0, 0);
+            }
             m_PlantPrefab = plantPrefab;
-            m_InstantiatedPlantPrefab = Instantiate(m_PlantPrefab, m_PlantInstantiationPoint.position, 
+            m_InstantiatedPlantPrefab = Instantiate(m_PlantPrefab, m_PlantInstantiationPoint.position + offset, 
                 m_PlantInstantiationPoint.rotation, m_PlantInstantiationPoint);
+
+            m_InstantiatedPlantPrefab.transform.Rotate(rotationOffset);
 
             MeshRenderer meshRenderer = m_InstantiatedPlantPrefab.GetComponentInChildren<MeshRenderer>();
             modelHeight = meshRenderer.bounds.size.y;
             modelWidth = meshRenderer.bounds.size.x;
 
             //Set the model camera and the zoom bound transforms according to the height of the prefab mesh
-            m_ModelCamera.transform.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -modelHeight, modelHeight * 5);
-            m_CamZoomInnerBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -5, modelHeight * 2);
-            m_CamZoomOuterBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -5, modelHeight * 10);
+            m_ModelCamera.transform.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -modelHeight, modelHeight * 2);
+            m_CamZoomInnerBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -5, modelHeight * .5f);
+            m_CamZoomOuterBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -5, modelHeight * 5);
 
             m_ModelCamera.transform.rotation = Quaternion.LookRotation(m_InstantiatedPlantPrefab.transform.position -
                 m_ModelCamera.transform.position,Vector3.up);

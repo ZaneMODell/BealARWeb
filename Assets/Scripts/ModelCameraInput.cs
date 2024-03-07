@@ -139,9 +139,13 @@ public class ModelCameraInput : MonoBehaviour
 
                     float xrot = m_ModelCam.transform.eulerAngles.x;
                     
-                    if (xrot < 0 || xrot > 180)
+                    if (xrot < 10)
                     {
-                        xrot = 0;
+                        xrot = 10;
+                    }
+                    else if (xrot > 170)
+                    {
+                        xrot = 170;
                     }
 
                     //Setting rotations
