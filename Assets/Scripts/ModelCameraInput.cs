@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -46,6 +47,10 @@ public class ModelCameraInput : MonoBehaviour
     [Tooltip("Transform that the camera will rotate around")]
     private Transform m_RotateTransform;
 
+    public float camRotationMin = 15f;
+
+    public float camRotationMax = 165f;
+
     /// <summary>
     /// Position of the camera on the previous frame
     /// </summary>
@@ -60,6 +65,8 @@ public class ModelCameraInput : MonoBehaviour
     /// Coroutine that handles zooming
     /// </summary>
     private Coroutine m_ZoomCoroutine;
+
+    public TextMeshProUGUI m_TestText;
     #endregion
 
     #region Script References
@@ -133,19 +140,21 @@ public class ModelCameraInput : MonoBehaviour
                     //Get the direction that the touch is going
                     Vector3 direction = m_PreviousCamPosition - m_ModelCam.ScreenToViewportPoint(Input.mousePosition);
 
+                    m_TestText.text = direction.magnitude.ToString();
+
                     m_ModelCam.transform.position = m_RotateTransform.position;
                     m_ModelViewManager.m_CamZoomInnerBound.position = m_RotateTransform.position;
                     m_ModelViewManager.m_CamZoomOuterBound.position = m_RotateTransform.position;
 
                     float xrot = m_ModelCam.transform.eulerAngles.x;
                     
-                    if (xrot < 10)
+                    if (xrot < camRotationMin)
                     {
-                        xrot = 10;
+                        xrot = camRotationMin;
                     }
-                    else if (xrot > 170)
+                    else if (xrot > camRotationMax)
                     {
-                        xrot = 170;
+                        xrot = camRotationMax;
                     }
 
                     //Setting rotations
@@ -154,18 +163,18 @@ public class ModelCameraInput : MonoBehaviour
                     m_ModelViewManager.m_CamZoomInnerBound.rotation = Quaternion.Euler(xrot, m_ModelCam.transform.eulerAngles.y, m_ModelCam.transform.eulerAngles.z);
 
                     //Rotating the camera
-                    m_ModelCam.transform.Rotate(new Vector3(1, 0, 0), direction.y * 180);
-                    m_ModelCam.transform.Rotate(new Vector3(0, 1, 0), -direction.x * 180);
+                    m_ModelCam.transform.Rotate(new Vector3(1, 0, 0), direction.y * 90);
+                    m_ModelCam.transform.Rotate(new Vector3(0, 1, 0), -direction.x * 90);
                     m_ModelCam.transform.Translate(new Vector3(0, 0, -m_CamDistanceFromModel));
 
                     //Rotating the inner bound
-                    m_ModelViewManager.m_CamZoomInnerBound.Rotate(new Vector3(1, 0, 0), direction.y * 180);
-                    m_ModelViewManager.m_CamZoomInnerBound.Rotate(new Vector3(0, 1, 0), -direction.x * 180);
+                    m_ModelViewManager.m_CamZoomInnerBound.Rotate(new Vector3(1, 0, 0), direction.y * 90);
+                    m_ModelViewManager.m_CamZoomInnerBound.Rotate(new Vector3(0, 1, 0), -direction.x * 90);
                     m_ModelViewManager.m_CamZoomInnerBound.Translate(new Vector3(0, 0, -m_InnerBoundDistanceFromModel));
 
                     //Rotating the outer bound
-                    m_ModelViewManager.m_CamZoomOuterBound.Rotate(new Vector3(1, 0, 0), direction.y * 180);
-                    m_ModelViewManager.m_CamZoomOuterBound.Rotate(new Vector3(0, 1, 0), -direction.x * 180);
+                    m_ModelViewManager.m_CamZoomOuterBound.Rotate(new Vector3(1, 0, 0), direction.y * 90);
+                    m_ModelViewManager.m_CamZoomOuterBound.Rotate(new Vector3(0, 1, 0), -direction.x * 90);
                     m_ModelViewManager.m_CamZoomOuterBound.Translate(new Vector3(0, 0, -m_OuterBoundDistanceFromModel));
 
                     //Setting the prev position to the current position

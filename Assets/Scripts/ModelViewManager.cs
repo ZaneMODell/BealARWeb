@@ -118,8 +118,8 @@ public class ModelViewManager : MonoBehaviour
 
             if (plantPrefab.name == "SnowTrillium")
             {
-                offset = new Vector3(-.975f, 0, -.07f);
-                rotationOffset = new Vector3(90, 0, 0);
+                offset = new Vector3(-1.125f, 0, .385f);
+                //rotationOffset = new Vector3(90, 0, 0);
             }
             m_PlantPrefab = plantPrefab;
             m_InstantiatedPlantPrefab = Instantiate(m_PlantPrefab, m_PlantInstantiationPoint.position + offset, 

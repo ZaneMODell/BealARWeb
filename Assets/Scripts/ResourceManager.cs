@@ -32,6 +32,13 @@ public class ResourceManager : MonoBehaviour
     public SerializedDictionary<string, List<string>> plantTextPairs;
 
     /// <summary>
+    /// Dictionary that holds the names of the plant prefabs and a list of strings used for their text
+    /// </summary>
+    [Tooltip("Dictionary that contains a mapping of prefab names and dialogue text")]
+    [SerializedDictionary("AR View Model Name", "Model View Model")]
+    public SerializedDictionary<string, GameObject> modelPairs;
+
+    /// <summary>
     /// Dialogue holder reference
     /// </summary>
     [Tooltip("Reference to the DialogueHolder")]

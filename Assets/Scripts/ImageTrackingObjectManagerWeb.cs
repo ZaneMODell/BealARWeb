@@ -173,13 +173,15 @@ public class ImageTrackingObjectManagerWeb : MonoBehaviour
 
     public void UpdateInfo()
     {
-        GameObject plantObject = resourceManager.imageTracker.GetTrackedObject();
-        string plantName = plantObject.name;
+        GameObject arObject = resourceManager.imageTracker.GetTrackedObject();
+
+        GameObject modelObject = resourceManager.modelPairs[arObject.name];
+        string plantName = modelObject.name;
         if (plantName != null)
         {
             resourceManager.UpdateMapLink(plantName);
             resourceManager.UpdatePlantDialogue(plantName);
-            m_ModelViewManager.SetModel(plantObject);
+            m_ModelViewManager.SetModel(modelObject);
         }
     }
     #endregion
