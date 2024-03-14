@@ -1390,60 +1390,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1523802503845305251, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1523802503845305251, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1523802503845305251, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1207409701}
-    - target: {fileID: 1523802503845305251, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1523802503845305251, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: DisableARCanvasIfARMode
-      objectReference: {fileID: 0}
-    - target: {fileID: 1523802503845305251, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ImageTrackingObjectManagerWeb, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1523802503845305251, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2967015789041455563, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2074347651}
-    - target: {fileID: 2967015789041455563, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EnableViewerMode
-      objectReference: {fileID: 0}
-    - target: {fileID: 3058178354906738042, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3918791237113059897, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
       propertyPath: m_Name
       value: ARCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3918791237113059897, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4582073333846698615, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4582073333846698615, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenMapURL
       objectReference: {fileID: 0}
     - target: {fileID: 5219273437829951706, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
       propertyPath: m_ViewManager
@@ -1457,47 +1409,11 @@ PrefabInstance:
       propertyPath: m_ModelViewManager
       value: 
       objectReference: {fileID: 381779746}
-    - target: {fileID: 5679271251729874400, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6047479629580239023, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6395699092385191667, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7215938657707208469, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 9126490510220899143, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9126490510220899143, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenURL
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 3058178354906738042, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
---- !u!114 &2074347651 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5219273437829951706, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
-  m_PrefabInstance: {fileID: 2074347650}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483070388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d72288a26903f7544b7a3025b63a3973, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1139317199889582203
 Transform:
   m_ObjectHideFlags: 0

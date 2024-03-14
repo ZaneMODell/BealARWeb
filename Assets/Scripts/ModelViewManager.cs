@@ -73,6 +73,13 @@ public class ModelViewManager : MonoBehaviour
     [Tooltip("Reference to the transform representing the outer bound of the camera zoom")]
     public Transform m_CamZoomOuterBound;
 
+
+    public float m_StartZoomDistance = 2f;
+
+    public float m_MinZoomDistance = .5f;
+
+    public float m_MaxZoomDistance = 5f;
+
     #endregion
 
     #region Script References
@@ -125,9 +132,9 @@ public class ModelViewManager : MonoBehaviour
             modelWidth = meshRenderer.bounds.size.x;
 
             //Set the model camera and the zoom bound transforms according to the height of the prefab mesh
-            m_ModelCamera.transform.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -modelHeight, modelHeight * 2);
-            m_CamZoomInnerBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -5, modelHeight * .5f);
-            m_CamZoomOuterBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -5, modelHeight * 5);
+            m_ModelCamera.transform.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -modelHeight, modelHeight * m_StartZoomDistance);
+            m_CamZoomInnerBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -5, modelHeight * m_MinZoomDistance);
+            m_CamZoomOuterBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -5, modelHeight * m_MaxZoomDistance);
 
             m_ModelCamera.transform.rotation = Quaternion.LookRotation(m_InstantiatedPlantPrefab.transform.position -
                 m_ModelCamera.transform.position,Vector3.up);

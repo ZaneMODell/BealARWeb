@@ -78,7 +78,18 @@ public class ARCanvasManager : MonoBehaviour
     #endregion
 
     #region Methods
-    
+
+    #region Unity Methods
+    private void Awake()
+    {
+        //RectTransform transform = GetComponent<RectTransform>();
+        //transform.sizeDelta = new Vector2(Screen.width, Screen.height);
+
+        //RectTransform viewButtonTransform = m_ViewButton.GetComponent<RectTransform>();
+        
+    }
+    #endregion
+
     #region Custom Methods
     /// <summary>
     /// Function that enables the model viewer mode via a UI Button Press
