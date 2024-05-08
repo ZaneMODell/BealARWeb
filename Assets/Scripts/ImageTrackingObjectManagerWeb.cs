@@ -42,60 +42,6 @@ public class ImageTrackingObjectManagerWeb : MonoBehaviour
 
     #region Prefab References
     [Header("Prefab References")]
-    [SerializeField]
-    [Tooltip("Prefab for tracked 1 m_SpriteImage")]
-    private GameObject m_PlantPrefab;
-
-    /// <summary>
-    /// Get the one prefab
-    /// </summary>
-    public GameObject PlantPrefab
-    {
-        get => m_PlantPrefab;
-        set => m_PlantPrefab = value;
-    }
-
-    /// <summary>
-    /// Spawned plant prefab
-    /// </summary>
-    private GameObject m_SpawnedPlantPrefab;
-
-    /// <summary>
-    /// get the spawned one prefab
-    /// </summary>
-    public GameObject SpawnedPlantPrefab
-    {
-        get => m_SpawnedPlantPrefab;
-        set => m_SpawnedPlantPrefab = value;
-    }
-
-    [SerializeField]
-    [Tooltip("Prefab for tracked 2 m_SpriteImage")]
-    private GameObject m_FrogPrefab;
-
-    /// <summary>
-    /// get the two prefab
-    /// </summary>
-    public GameObject FrogPrefab
-    {
-        get => m_FrogPrefab;
-        set => m_FrogPrefab = value;
-    }
-
-    /// <summary>
-    /// Spawned frog prefab
-    /// </summary>
-    private GameObject m_SpawnedFrogPrefab;
-
-    /// <summary>
-    /// get the spawned two prefab
-    /// </summary>
-    public GameObject SpawnedFrogPrefab
-    {
-        get => m_SpawnedFrogPrefab;
-        set => m_SpawnedFrogPrefab = value;
-    }
-
     /// <summary>
     /// Name of the plant that is active
     /// </summary>

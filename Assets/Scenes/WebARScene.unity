@@ -911,78 +911,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d31c267931204049b5d074494dd03f3, type: 3}
---- !u!1001 &1063401542
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.0082
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3.0082
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3.0082
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -110.58808
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.759223
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -20.821255
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.99998516
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.005447927
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.624
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-      propertyPath: m_Name
-      value: FoxGlove
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 3361634513375469152, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-    - {fileID: 1400086564404443856, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-    - {fileID: 1218912716677395249, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 966d6964f5918b24aa1b490a75e82646, type: 3}
 --- !u!114 &1115265385 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8178918373588747811, guid: 3d31c267931204049b5d074494dd03f3, type: 3}
@@ -1230,19 +1158,39 @@ PrefabInstance:
       objectReference: {fileID: 316188714}
     - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
       propertyPath: mapLinks._serializedList.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
       propertyPath: modelPairs._serializedList.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
-      propertyPath: mapLinks._serializedList.Array.data[1].Key
+      propertyPath: plantTextPairs._serializedList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: mapLinks._serializedList.Array.data[0].Key
       value: SnowTrillium
       objectReference: {fileID: 0}
     - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: mapLinks._serializedList.Array.data[1].Key
+      value: SnowTrilliumMultiple
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
       propertyPath: mapLinks._serializedList.Array.data[2].Key
-      value: FrogARModel
+      value: GinsengMultiple
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: mapLinks._serializedList.Array.data[3].Key
+      value: Ginseng
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: mapLinks._serializedList.Array.data[4].Key
+      value: FoxGlove
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: mapLinks._serializedList.Array.data[0].Value
+      value: https://plants.usda.gov/home/plantProfile?symbol=TRNI2
       objectReference: {fileID: 0}
     - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
       propertyPath: mapLinks._serializedList.Array.data[1].Value
@@ -1250,6 +1198,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
       propertyPath: mapLinks._serializedList.Array.data[2].Value
+      value: https://plants.usda.gov/home/plantProfile?symbol=TRNI2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: mapLinks._serializedList.Array.data[3].Value
+      value: https://www.plantmaps.com/nrm-acer-rubrum-red-maple-native-range-map
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: mapLinks._serializedList.Array.data[4].Value
       value: https://t4.ftcdn.net/jpg/05/75/04/47/360_F_575044721_BorgMFq7Ee9UKz2PSdGdCse5oMW3tF6I.jpg
       objectReference: {fileID: 0}
     - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
@@ -1257,16 +1213,88 @@ PrefabInstance:
       value: SnowTrilliumMultiple
       objectReference: {fileID: 0}
     - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: modelPairs._serializedList.Array.data[1].Key
+      value: GinsengMultiple
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: modelPairs._serializedList.Array.data[2].Key
+      value: FoxGlove
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
       propertyPath: modelPairs._serializedList.Array.data[0].Value
       value: 
-      objectReference: {fileID: 7085207744644568853, guid: 94bcc1d5be8bf8e4492ce24ff16d103e, type: 3}
+      objectReference: {fileID: 1049700662255002518, guid: ea63ca2d4f9c4594da31fcbce2f157b2, type: 3}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: modelPairs._serializedList.Array.data[1].Value
+      value: 
+      objectReference: {fileID: 866370228278948222, guid: 8ca0b47971ffc604da2eb0f07dcf57ff, type: 3}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: modelPairs._serializedList.Array.data[2].Value
+      value: 
+      objectReference: {fileID: 1928314037256698726, guid: 5e4cbf01c596e854ca9afff06fb69c31, type: 3}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: plantTextPairs._serializedList.Array.data[0].Key
+      value: Ginseng
+      objectReference: {fileID: 0}
     - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
       propertyPath: plantTextPairs._serializedList.Array.data[1].Key
+      value: FoxGlove
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: plantTextPairs._serializedList.Array.data[2].Key
       value: SnowTrillium
       objectReference: {fileID: 0}
     - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: plantTextPairs._serializedList.Array.data[3].Key
+      value: SnowTrilliumMultiple
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: plantTextPairs._serializedList.Array.data[4].Key
+      value: GinsengMultiple
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: plantTextPairs._serializedList.Array.data[0].Value.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: plantTextPairs._serializedList.Array.data[1].Value.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: plantTextPairs._serializedList.Array.data[2].Value.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: plantTextPairs._serializedList.Array.data[3].Value.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: plantTextPairs._serializedList.Array.data[4].Value.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: plantTextPairs._serializedList.Array.data[0].Value.Array.data[0]
+      value: This is a ginseng.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
       propertyPath: plantTextPairs._serializedList.Array.data[1].Value.Array.data[0]
+      value: This is a foxglove.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: plantTextPairs._serializedList.Array.data[1].Value.Array.data[1]
+      value: This is a follow up piece of dialogue.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: plantTextPairs._serializedList.Array.data[2].Value.Array.data[0]
       value: This is a snow trillium.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: plantTextPairs._serializedList.Array.data[3].Value.Array.data[0]
+      value: This is a snow trillium multiple.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: plantTextPairs._serializedList.Array.data[4].Value.Array.data[0]
+      value: This is a ginseng multiple.
       objectReference: {fileID: 0}
     - target: {fileID: 7155550408547651643, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
       propertyPath: m_Name
@@ -1416,6 +1444,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
+--- !u!1001 &648890540025219065
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 825448257479484681, guid: 32f500945d20db841a97561af04fa13f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -124.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 825448257479484681, guid: 32f500945d20db841a97561af04fa13f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.762
+      objectReference: {fileID: 0}
+    - target: {fileID: 825448257479484681, guid: 32f500945d20db841a97561af04fa13f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.553
+      objectReference: {fileID: 0}
+    - target: {fileID: 825448257479484681, guid: 32f500945d20db841a97561af04fa13f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 825448257479484681, guid: 32f500945d20db841a97561af04fa13f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 825448257479484681, guid: 32f500945d20db841a97561af04fa13f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 825448257479484681, guid: 32f500945d20db841a97561af04fa13f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 825448257479484681, guid: 32f500945d20db841a97561af04fa13f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 825448257479484681, guid: 32f500945d20db841a97561af04fa13f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 825448257479484681, guid: 32f500945d20db841a97561af04fa13f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294863330355394046, guid: 32f500945d20db841a97561af04fa13f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961474236827976221, guid: 32f500945d20db841a97561af04fa13f, type: 3}
+      propertyPath: m_Name
+      value: Ginseng
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961474236827976221, guid: 32f500945d20db841a97561af04fa13f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 32f500945d20db841a97561af04fa13f, type: 3}
 --- !u!4 &1139317199889582203
 Transform:
   m_ObjectHideFlags: 0
@@ -1643,7 +1736,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   editorCamera: 
   paused: 0
-  videoPlaneMode: 0
+  videoPlaneMode: 1
   videoDistance: 100
   webcamTextureInitializing: 0
 --- !u!23 &2798022900535959251
@@ -1758,6 +1851,67 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7605670278936678060}
   m_Mesh: {fileID: 4300000, guid: bef7e12f582b346e9878a98f5a723ada, type: 2}
+--- !u!1001 &7536072646415656935
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 866370228278948222, guid: 8ca0b47971ffc604da2eb0f07dcf57ff, type: 3}
+      propertyPath: m_Name
+      value: GinsengMultiple
+      objectReference: {fileID: 0}
+    - target: {fileID: 866370228278948222, guid: 8ca0b47971ffc604da2eb0f07dcf57ff, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2362783872713214728, guid: 8ca0b47971ffc604da2eb0f07dcf57ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -130.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2362783872713214728, guid: 8ca0b47971ffc604da2eb0f07dcf57ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.751
+      objectReference: {fileID: 0}
+    - target: {fileID: 2362783872713214728, guid: 8ca0b47971ffc604da2eb0f07dcf57ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2362783872713214728, guid: 8ca0b47971ffc604da2eb0f07dcf57ff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2362783872713214728, guid: 8ca0b47971ffc604da2eb0f07dcf57ff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2362783872713214728, guid: 8ca0b47971ffc604da2eb0f07dcf57ff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2362783872713214728, guid: 8ca0b47971ffc604da2eb0f07dcf57ff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2362783872713214728, guid: 8ca0b47971ffc604da2eb0f07dcf57ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2362783872713214728, guid: 8ca0b47971ffc604da2eb0f07dcf57ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2362783872713214728, guid: 8ca0b47971ffc604da2eb0f07dcf57ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8ca0b47971ffc604da2eb0f07dcf57ff, type: 3}
 --- !u!1 &7605670278936678060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,6 +1930,63 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &8212975611390213006
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1928314037256698726, guid: 5e4cbf01c596e854ca9afff06fb69c31, type: 3}
+      propertyPath: m_Name
+      value: FoxGlove
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161681135916736813, guid: 5e4cbf01c596e854ca9afff06fb69c31, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -110.6825
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161681135916736813, guid: 5e4cbf01c596e854ca9afff06fb69c31, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161681135916736813, guid: 5e4cbf01c596e854ca9afff06fb69c31, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.8286
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161681135916736813, guid: 5e4cbf01c596e854ca9afff06fb69c31, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161681135916736813, guid: 5e4cbf01c596e854ca9afff06fb69c31, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161681135916736813, guid: 5e4cbf01c596e854ca9afff06fb69c31, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161681135916736813, guid: 5e4cbf01c596e854ca9afff06fb69c31, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161681135916736813, guid: 5e4cbf01c596e854ca9afff06fb69c31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161681135916736813, guid: 5e4cbf01c596e854ca9afff06fb69c31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161681135916736813, guid: 5e4cbf01c596e854ca9afff06fb69c31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e4cbf01c596e854ca9afff06fb69c31, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1794,4 +2005,6 @@ SceneRoots:
   - {fileID: 380769344}
   - {fileID: 1710300713644788086}
   - {fileID: 2128531112643921974}
-  - {fileID: 1063401542}
+  - {fileID: 8212975611390213006}
+  - {fileID: 648890540025219065}
+  - {fileID: 7536072646415656935}
