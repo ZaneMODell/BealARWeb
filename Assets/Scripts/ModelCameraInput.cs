@@ -105,7 +105,7 @@ public class ModelCameraInput : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        //Syntax used to subscribe to events and call functions, need to look into more
+        //Syntax used to subscribe to events and call functions
         m_TouchZoom.Touch.SecondaryTouchContact.started += _ => ZoomStart();
         m_TouchZoom.Touch.SecondaryTouchContact.canceled += _ => ZoomEnd();
     }
@@ -151,43 +151,46 @@ public class ModelCameraInput : MonoBehaviour
 
                     m_TestText.text = direction.magnitude.ToString();
 
-                    m_ModelCam.transform.position = m_RotateTransform.position;
-                    m_ModelViewManager.m_CamZoomInnerBound.position = m_RotateTransform.position;
-                    m_ModelViewManager.m_CamZoomOuterBound.position = m_RotateTransform.position;
+                    if (direction.magnitude <= 0.15f)
+                    {
+                        m_ModelCam.transform.position = m_RotateTransform.position;
+                        m_ModelViewManager.m_CamZoomInnerBound.position = m_RotateTransform.position;
+                        m_ModelViewManager.m_CamZoomOuterBound.position = m_RotateTransform.position;
 
-                    float xrot = m_ModelCam.transform.eulerAngles.x;
+                        float xrot = m_ModelCam.transform.eulerAngles.x;
                     
-                    if (xrot < camRotationMin)
-                    {
-                        xrot = camRotationMin;
+                        if (xrot < camRotationMin)
+                        {
+                            xrot = camRotationMin;
+                        }
+                        else if (xrot > camRotationMax)
+                        {
+                            xrot = camRotationMax;
+                        }
+
+                        //Setting rotations
+                        m_ModelCam.transform.rotation = Quaternion.Euler(xrot, m_ModelCam.transform.eulerAngles.y, m_ModelCam.transform.eulerAngles.z);
+                        m_ModelViewManager.m_CamZoomOuterBound.rotation = Quaternion.Euler(xrot, m_ModelCam.transform.eulerAngles.y, m_ModelCam.transform.eulerAngles.z);
+                        m_ModelViewManager.m_CamZoomInnerBound.rotation = Quaternion.Euler(xrot, m_ModelCam.transform.eulerAngles.y, m_ModelCam.transform.eulerAngles.z);
+
+                        //Rotating the camera
+                        m_ModelCam.transform.Rotate(new Vector3(1, 0, 0), direction.y * 90);
+                        m_ModelCam.transform.Rotate(new Vector3(0, 1, 0), -direction.x * 90);
+                        m_ModelCam.transform.Translate(new Vector3(0, 0, -m_CamDistanceFromModel));
+
+                        //Rotating the inner bound
+                        m_ModelViewManager.m_CamZoomInnerBound.Rotate(new Vector3(1, 0, 0), direction.y * 90);
+                        m_ModelViewManager.m_CamZoomInnerBound.Rotate(new Vector3(0, 1, 0), -direction.x * 90);
+                        m_ModelViewManager.m_CamZoomInnerBound.Translate(new Vector3(0, 0, -m_InnerBoundDistanceFromModel));
+
+                        //Rotating the outer bound
+                        m_ModelViewManager.m_CamZoomOuterBound.Rotate(new Vector3(1, 0, 0), direction.y * 90);
+                        m_ModelViewManager.m_CamZoomOuterBound.Rotate(new Vector3(0, 1, 0), -direction.x * 90);
+                        m_ModelViewManager.m_CamZoomOuterBound.Translate(new Vector3(0, 0, -m_OuterBoundDistanceFromModel));
+
+                        //Setting the prev position to the current position
+                        m_PreviousCamPosition = m_ModelCam.ScreenToViewportPoint(Input.mousePosition);
                     }
-                    else if (xrot > camRotationMax)
-                    {
-                        xrot = camRotationMax;
-                    }
-
-                    //Setting rotations
-                    m_ModelCam.transform.rotation = Quaternion.Euler(xrot, m_ModelCam.transform.eulerAngles.y, m_ModelCam.transform.eulerAngles.z);
-                    m_ModelViewManager.m_CamZoomOuterBound.rotation = Quaternion.Euler(xrot, m_ModelCam.transform.eulerAngles.y, m_ModelCam.transform.eulerAngles.z);
-                    m_ModelViewManager.m_CamZoomInnerBound.rotation = Quaternion.Euler(xrot, m_ModelCam.transform.eulerAngles.y, m_ModelCam.transform.eulerAngles.z);
-
-                    //Rotating the camera
-                    m_ModelCam.transform.Rotate(new Vector3(1, 0, 0), direction.y * 90);
-                    m_ModelCam.transform.Rotate(new Vector3(0, 1, 0), -direction.x * 90);
-                    m_ModelCam.transform.Translate(new Vector3(0, 0, -m_CamDistanceFromModel));
-
-                    //Rotating the inner bound
-                    m_ModelViewManager.m_CamZoomInnerBound.Rotate(new Vector3(1, 0, 0), direction.y * 90);
-                    m_ModelViewManager.m_CamZoomInnerBound.Rotate(new Vector3(0, 1, 0), -direction.x * 90);
-                    m_ModelViewManager.m_CamZoomInnerBound.Translate(new Vector3(0, 0, -m_InnerBoundDistanceFromModel));
-
-                    //Rotating the outer bound
-                    m_ModelViewManager.m_CamZoomOuterBound.Rotate(new Vector3(1, 0, 0), direction.y * 90);
-                    m_ModelViewManager.m_CamZoomOuterBound.Rotate(new Vector3(0, 1, 0), -direction.x * 90);
-                    m_ModelViewManager.m_CamZoomOuterBound.Translate(new Vector3(0, 0, -m_OuterBoundDistanceFromModel));
-
-                    //Setting the prev position to the current position
-                    m_PreviousCamPosition = m_ModelCam.ScreenToViewportPoint(Input.mousePosition);
                 }
             }
         }
