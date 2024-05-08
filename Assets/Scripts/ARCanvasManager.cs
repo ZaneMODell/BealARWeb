@@ -44,18 +44,6 @@ public class ARCanvasManager : MonoBehaviour
     [Tooltip("Test text for debugging")]
     TextMeshProUGUI m_TestText;
 
-    /// <summary>
-    /// Image used for a fade in effect upon app start
-    /// </summary>
-    [SerializeField]
-    [Tooltip("UI m_SpriteImage used for fade in on app start")]
-    //Image m_FadeImage;
-
-    /// <summary>
-    /// Alpha variable used for fade effect
-    /// </summary>
-    private float alpha = 1;
-
     #region Script References
     /// <summary>
     /// Reference to the ViewManager m_Instance
@@ -78,17 +66,6 @@ public class ARCanvasManager : MonoBehaviour
     #endregion
 
     #region Methods
-
-    #region Unity Methods
-    private void Awake()
-    {
-        //RectTransform transform = GetComponent<RectTransform>();
-        //transform.sizeDelta = new Vector2(Screen.width, Screen.height);
-
-        //RectTransform viewButtonTransform = m_ViewButton.GetComponent<RectTransform>();
-        
-    }
-    #endregion
 
     #region Custom Methods
     /// <summary>

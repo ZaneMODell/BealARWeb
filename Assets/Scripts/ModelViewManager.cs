@@ -73,11 +73,22 @@ public class ModelViewManager : MonoBehaviour
     [Tooltip("Reference to the transform representing the outer bound of the camera zoom")]
     public Transform m_CamZoomOuterBound;
 
-
+    /// <summary>
+    /// Distance where the camera begins from the plant
+    /// </summary>
+    [Tooltip("Distance where the camera begins from the plant")]
     public float m_StartZoomDistance = 2f;
 
+    /// <summary>
+    /// Minimum distance the camera can be from the plant
+    /// </summary>
+    [Tooltip("Minimum distance the camera can be from the plant")]
     public float m_MinZoomDistance = .5f;
 
+    /// <summary>
+    /// Maximum distance the camera can be from the plant
+    /// </summary>
+    [Tooltip("Maximum distance the camera can be from the plant")]
     public float m_MaxZoomDistance = 5f;
 
     #endregion
@@ -108,7 +119,7 @@ public class ModelViewManager : MonoBehaviour
     /// <param name="plantPrefab"></param>
     public void SetModel(GameObject plantPrefab)
     {
-        if (!m_ModelSet /*&& m_ViewManager.m_ViewState == ViewManager.ViewState.Model*/)
+        if (!m_ModelSet)
         {
             //Get the prefab to set in the model view and instantiate it
 
@@ -116,6 +127,7 @@ public class ModelViewManager : MonoBehaviour
 
             Vector3 rotationOffset = Vector3.zero;
 
+            //NEED TO ADD MORE CONDITIONS FOR THE OTHER PLANTS TO GET THEM IN THE PROPER SPOT
             if (plantPrefab.name == "SnowTrillium")
             {
                 offset = new Vector3(-1.125f, 0, .385f);

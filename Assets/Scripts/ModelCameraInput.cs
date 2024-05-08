@@ -47,8 +47,14 @@ public class ModelCameraInput : MonoBehaviour
     [Tooltip("Transform that the camera will rotate around")]
     private Transform m_RotateTransform;
 
+    /// <summary>
+    /// Minimum degrees that the camera can rotate
+    /// </summary>
     public float camRotationMin = 15f;
 
+    /// <summary>
+    /// Maximum degrees that the camera can rotate
+    /// </summary>
     public float camRotationMax = 165f;
 
     /// <summary>
@@ -66,6 +72,9 @@ public class ModelCameraInput : MonoBehaviour
     /// </summary>
     private Coroutine m_ZoomCoroutine;
 
+    /// <summary>
+    /// Testing text reference
+    /// </summary>
     public TextMeshProUGUI m_TestText;
     #endregion
 
@@ -180,7 +189,6 @@ public class ModelCameraInput : MonoBehaviour
                     //Setting the prev position to the current position
                     m_PreviousCamPosition = m_ModelCam.ScreenToViewportPoint(Input.mousePosition);
                 }
-
             }
         }
     }

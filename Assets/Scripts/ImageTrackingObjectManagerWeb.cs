@@ -6,40 +6,7 @@ using UnityEngine;
 public class ImageTrackingObjectManagerWeb : MonoBehaviour
 {
     #region Class Variables
-    #region Image Related Information
-    [Header("Image Related Info")]
-    //[SerializeField]
-    //[Tooltip("Image manager on the AR Session Origin")]
-    //ARTrackedImageManager m_ImageManager;
-
-    ///// <summary>
-    ///// Get the <c>ARTrackedImageManager</c>
-    ///// </summary>
-    //public ARTrackedImageManager ImageManager
-    //{
-    //    get => m_ImageManager;
-    //    set => m_ImageManager = value;
-    //}
-
-    //[SerializeField]
-    //[Tooltip("Reference Image Library")]
-    //private XRReferenceImageLibrary m_ImageLibrary;
-
-    ///// <summary>
-    ///// Get the <c>XRReferenceImageLibrary</c>
-    ///// </summary>
-    //public XRReferenceImageLibrary ImageLibrary
-    //{
-    //    get => m_ImageLibrary;
-    //    set => m_ImageLibrary = value;
-    //}
-
-    private int m_NumberOfTrackedImages;
-
-    private static Guid s_FirstImageGUID;
-    private static Guid s_SecondImageGUID;
-    #endregion
-
+    
     #region Prefab References
     [Header("Prefab References")]
     /// <summary>
@@ -90,6 +57,9 @@ public class ImageTrackingObjectManagerWeb : MonoBehaviour
     #region Methods
     #region Unity Methods
 
+    /// <summary>
+    /// Unity method called on object's enabling/scene start
+    /// </summary>
     private void Start()
     {
         DisableARCanvas();
@@ -98,17 +68,26 @@ public class ImageTrackingObjectManagerWeb : MonoBehaviour
     #endregion
 
     #region Custom Methods
+    /// <summary>
+    /// Function that enables the AR Canvas
+    /// </summary>
     public void EnableARCanvas()
     {
         m_ARCanvas.SetActive(true);
     }
 
+    /// <summary>
+    /// Function that disables the AR Canvas and resets the test text
+    /// </summary>
     public void DisableARCanvas()
     {
         m_ARCanvas.SetActive(false);
         testText.text = "";
     }
 
+    /// <summary>
+    /// Function that only disables the AR Canvas if it is in AR mode
+    /// </summary>
     public void DisableARCanvasIfARMode()
     {
         if (m_ViewManager.m_ViewState == ViewManager.ViewState.AR)
@@ -117,6 +96,9 @@ public class ImageTrackingObjectManagerWeb : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Function that updates info when an image is tracked
+    /// </summary>
     public void UpdateInfo()
     {
         GameObject arObject = resourceManager.imageTracker.GetTrackedObject();

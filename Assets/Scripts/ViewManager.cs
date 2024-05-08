@@ -40,13 +40,6 @@ public class ViewManager : MonoBehaviour
     private Camera m_ModelCamera;
 
     /// <summary>
-    /// TrackedPoseDriver m_Instance used for AR Camera Rotation and Position Tracking
-    /// </summary>
-    //[SerializeField]
-    //[Tooltip("Reference to the TrackedPoseDriver AR component")]
-    //private TrackedPoseDriver m_TrackedPoseDriver;
-
-    /// <summary>
     /// Position to lock the camera to during view switch
     /// </summary>
     private Vector3 m_CamLockPosition;
