@@ -373,9 +373,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6328123139456850869, guid: 79f2a1824e21c6b4d835da668ed20e45, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328123139456850869, guid: 79f2a1824e21c6b4d835da668ed20e45, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328123139456850869, guid: 79f2a1824e21c6b4d835da668ed20e45, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 219.42004
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328123139456850869, guid: 79f2a1824e21c6b4d835da668ed20e45, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 278.66
+      objectReference: {fileID: 0}
     - target: {fileID: 6328123140170490036, guid: 79f2a1824e21c6b4d835da668ed20e45, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -27.200012
+      value: -27.200073
       objectReference: {fileID: 0}
     - target: {fileID: 6674296974371818824, guid: 79f2a1824e21c6b4d835da668ed20e45, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1156,9 +1172,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1856838540}
     - target: {fileID: 4604147197829580278, guid: 8ae6f41108ea764449ad4c9b3b21150b, type: 3}
+      propertyPath: m_MinZoomDistance
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604147197829580278, guid: 8ae6f41108ea764449ad4c9b3b21150b, type: 3}
       propertyPath: m_ModelCameraInput
       value: 
       objectReference: {fileID: 1115265385}
+    - target: {fileID: 6315675818102139705, guid: 8ae6f41108ea764449ad4c9b3b21150b, type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 7987120909954728123, guid: 8ae6f41108ea764449ad4c9b3b21150b, type: 3}
       propertyPath: m_Name
       value: ModelView
@@ -1491,6 +1515,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1207409701}
+    - target: {fileID: 3306495108654709481, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306495108654709481, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306495108654709481, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306495108654709481, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306495108654709481, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 234
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306495108654709481, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -209
+      objectReference: {fileID: 0}
     - target: {fileID: 3918791237113059897, guid: 8818244936ece2f4b96030b6c516354d, type: 3}
       propertyPath: m_Name
       value: ARCanvas
