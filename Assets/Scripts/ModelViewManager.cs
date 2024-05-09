@@ -113,8 +113,6 @@ public class ModelViewManager : MonoBehaviour
     /// <param name="plantPrefab"></param>
     public void SetModel(GameObject plantPrefab)
     {
-        //if (!m_ModelSet)
-        //{
         //Get the prefab to set in the model view and instantiate it
 
         Vector3 offset = Vector3.zero;
@@ -153,7 +151,6 @@ public class ModelViewManager : MonoBehaviour
         //Last set things
         m_ModelCamera.transform.eulerAngles = new Vector3(0, 0, 5);
         m_ModelSet = true;
-        //}
     }
 
     /// <summary>
