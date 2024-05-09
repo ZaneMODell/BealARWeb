@@ -25,12 +25,13 @@ public class ModelViewManager : MonoBehaviour
     /// <summary>
     /// Actual instantiated plant prefab, used for resizing and such
     /// </summary>
-    private GameObject m_InstantiatedPlantPrefab;
+    [HideInInspector]
+    public GameObject m_InstantiatedPlantPrefab;
 
     /// <summary>
     /// Boolean stating whether or not the model has been set in the model view mode
     /// </summary>
-    private bool m_ModelSet;
+    public bool m_ModelSet;
 
     /// <summary>
     /// Height of the mesh of the model
@@ -46,14 +47,7 @@ public class ModelViewManager : MonoBehaviour
     #endregion
 
     #region Camera and Zoom Variables
-    /// <summary>
-    /// Reference to the main camera object used for AR
-    /// </summary>
     [Header("Camera and Zoom References")]
-    //[SerializeField]
-    //[Tooltip("Reference to the main camera, the one that handles AR")]
-    //private GameObject m_MainCamera;
-
     /// <summary>
     /// Reference to the model camera object used for the model viewer
     /// </summary>
@@ -119,47 +113,47 @@ public class ModelViewManager : MonoBehaviour
     /// <param name="plantPrefab"></param>
     public void SetModel(GameObject plantPrefab)
     {
-        if (!m_ModelSet)
-        {
-            //Get the prefab to set in the model view and instantiate it
+        //if (!m_ModelSet)
+        //{
+        //Get the prefab to set in the model view and instantiate it
 
-            Vector3 offset;
+        Vector3 offset = Vector3.zero;
 
-            Vector3 rotationOffset = Vector3.zero;
+        Vector3 rotationOffset = Vector3.zero;
 
-            //NEED TO ADD MORE CONDITIONS FOR THE OTHER PLANTS TO GET THEM IN THE PROPER SPOT
-            offset = new Vector3(-1.125f, 0, .385f);
-            if (plantPrefab.name == "SnowTrillium")
-            {
-                //rotationOffset = new Vector3(90, 0, 0);
-            }
-            m_PlantPrefab = plantPrefab;
-            m_InstantiatedPlantPrefab = Instantiate(m_PlantPrefab, m_PlantInstantiationPoint.position + offset, 
-                m_PlantInstantiationPoint.rotation, m_PlantInstantiationPoint);
+        //NEED TO ADD MORE CONDITIONS FOR THE OTHER PLANTS TO GET THEM IN THE PROPER SPOT
+        //if (plantPrefab.name == "SnowTrillium")
+        //{
+        //    offset = new Vector3(-1.125f, 0, .385f);
+        //    //rotationOffset = new Vector3(90, 0, 0);
+        //}
+        m_PlantPrefab = plantPrefab;
+        m_InstantiatedPlantPrefab = Instantiate(m_PlantPrefab, m_PlantInstantiationPoint.position + offset, 
+            m_PlantInstantiationPoint.rotation, m_PlantInstantiationPoint);
 
-            m_InstantiatedPlantPrefab.transform.Rotate(rotationOffset);
+        m_InstantiatedPlantPrefab.transform.Rotate(rotationOffset);
 
-            MeshRenderer meshRenderer = m_InstantiatedPlantPrefab.GetComponentInChildren<MeshRenderer>();
-            modelHeight = meshRenderer.bounds.size.y;
-            modelWidth = meshRenderer.bounds.size.x;
+        MeshRenderer meshRenderer = m_InstantiatedPlantPrefab.GetComponentInChildren<MeshRenderer>();
+        modelHeight = meshRenderer.bounds.size.y;
+        modelWidth = meshRenderer.bounds.size.x;
 
-            //Set the model camera and the zoom bound transforms according to the height of the prefab mesh
-            m_ModelCamera.transform.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -modelHeight, modelHeight * m_StartZoomDistance);
-            m_CamZoomInnerBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -5, modelHeight * m_MinZoomDistance);
-            m_CamZoomOuterBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -5, modelHeight * m_MaxZoomDistance);
+        //Set the model camera and the zoom bound transforms according to the height of the prefab mesh
+        m_ModelCamera.transform.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -modelHeight, modelHeight * m_StartZoomDistance);
+        m_CamZoomInnerBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -5, modelHeight * m_MinZoomDistance);
+        m_CamZoomOuterBound.position = m_InstantiatedPlantPrefab.transform.position - new Vector3(0, -5, modelHeight * m_MaxZoomDistance);
 
-            m_ModelCamera.transform.rotation = Quaternion.LookRotation(m_InstantiatedPlantPrefab.transform.position -
-                m_ModelCamera.transform.position,Vector3.up);
+        m_ModelCamera.transform.rotation = Quaternion.LookRotation(m_InstantiatedPlantPrefab.transform.position -
+            m_ModelCamera.transform.position,Vector3.up);
 
-            //Calculate the distances from the prefab for rotation purposes
-            m_ModelCameraInput.m_CamDistanceFromModel = Mathf.Abs(m_ModelCamera.transform.position.z - m_InstantiatedPlantPrefab.transform.position.z);
-            m_ModelCameraInput.m_InnerBoundDistanceFromModel = Mathf.Abs(m_CamZoomInnerBound.position.z - m_InstantiatedPlantPrefab.transform.position.z);
-            m_ModelCameraInput.m_OuterBoundDistanceFromModel = Mathf.Abs(m_CamZoomOuterBound.position.z - m_InstantiatedPlantPrefab.transform.position.z);
+        //Calculate the distances from the prefab for rotation purposes
+        m_ModelCameraInput.m_CamDistanceFromModel = Mathf.Abs(m_ModelCamera.transform.position.z - m_InstantiatedPlantPrefab.transform.position.z);
+        m_ModelCameraInput.m_InnerBoundDistanceFromModel = Mathf.Abs(m_CamZoomInnerBound.position.z - m_InstantiatedPlantPrefab.transform.position.z);
+        m_ModelCameraInput.m_OuterBoundDistanceFromModel = Mathf.Abs(m_CamZoomOuterBound.position.z - m_InstantiatedPlantPrefab.transform.position.z);
 
-            //Last set things
-            m_ModelCamera.transform.eulerAngles = new Vector3(0, 0, 5);
-            m_ModelSet = true;
-        }
+        //Last set things
+        m_ModelCamera.transform.eulerAngles = new Vector3(0, 0, 5);
+        m_ModelSet = true;
+        //}
     }
 
     /// <summary>

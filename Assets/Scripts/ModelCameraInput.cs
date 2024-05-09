@@ -136,8 +136,9 @@ public class ModelCameraInput : MonoBehaviour
         if (m_ViewManager.m_ViewState == ViewManager.ViewState.Model)
         {
             //If there are less than 2 touches, we are going to rotate
-            if (Input.touchCount < 2)
+            if (Input.touchCount < 2 && m_ModelViewManager.m_ModelSet)
             {
+                m_RotateTransform = m_ModelViewManager.m_InstantiatedPlantPrefab.transform;
                 if (Input.GetMouseButtonDown(0))
                 {
                     //Set previous position to "current" position
