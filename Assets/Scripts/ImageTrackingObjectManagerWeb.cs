@@ -109,7 +109,7 @@ public class ImageTrackingObjectManagerWeb : MonoBehaviour
         {
             resourceManager.UpdateMapLink(plantName);
             resourceManager.UpdatePlantDialogue(plantName);
-            m_ModelViewManager.SetModel(modelObject);
+            m_ModelViewManager.SetModel(modelObject, resourceManager.rotationOffsets[plantName]);
         }
     }
     #endregion

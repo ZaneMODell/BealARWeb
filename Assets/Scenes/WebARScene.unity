@@ -1405,6 +1405,10 @@ PrefabInstance:
       value: FoxGlove
       objectReference: {fileID: 0}
     - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: rotationOffsets._serializedList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
       propertyPath: mapLinks._serializedList.Array.data[0].Value
       value: https://plants.usda.gov/home/plantProfile?symbol=TRNI2
       objectReference: {fileID: 0}
@@ -1467,6 +1471,22 @@ PrefabInstance:
     - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
       propertyPath: plantTextPairs._serializedList.Array.data[4].Key
       value: GinsengMultiple
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: rotationOffsets._serializedList.Array.data[0].Key
+      value: SnowTrillium
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: rotationOffsets._serializedList.Array.data[1].Key
+      value: Ginseng
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: rotationOffsets._serializedList.Array.data[2].Key
+      value: FoxGlove
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
+      propertyPath: rotationOffsets._serializedList.Array.data[2].Value.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5775154573610420683, guid: e0b7e4243b8f3374790496b8d519842e, type: 3}
       propertyPath: plantTextPairs._serializedList.Array.data[0].Value.Array.size

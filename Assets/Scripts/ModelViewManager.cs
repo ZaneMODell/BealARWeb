@@ -111,20 +111,12 @@ public class ModelViewManager : MonoBehaviour
     /// Sets the plant prefab in the model viewer and all of the camera/zoom related objects
     /// </summary>
     /// <param name="plantPrefab"></param>
-    public void SetModel(GameObject plantPrefab)
+    public void SetModel(GameObject plantPrefab, Vector3 offset)
     {
         //Get the prefab to set in the model view and instantiate it
 
-        Vector3 offset = Vector3.zero;
-
         Vector3 rotationOffset = Vector3.zero;
 
-        //NEED TO ADD MORE CONDITIONS FOR THE OTHER PLANTS TO GET THEM IN THE PROPER SPOT
-        //if (plantPrefab.name == "SnowTrillium")
-        //{
-        //    offset = new Vector3(-1.125f, 0, .385f);
-        //    //rotationOffset = new Vector3(90, 0, 0);
-        //}
         m_PlantPrefab = plantPrefab;
         m_InstantiatedPlantPrefab = Instantiate(m_PlantPrefab, m_PlantInstantiationPoint.position + offset, 
             m_PlantInstantiationPoint.rotation, m_PlantInstantiationPoint);

@@ -38,6 +38,10 @@ public class ResourceManager : MonoBehaviour
     [SerializedDictionary("AR View Model Name", "Model View Model")]
     public SerializedDictionary<string, GameObject> modelPairs;
 
+    [Tooltip("Dictionary that contains a mapping of prefab names and vector position offsets")]
+    [SerializedDictionary("Plant Prefab Name", "Rotation Point Offset")]
+    public SerializedDictionary<string, Vector3> rotationOffsets;
+
     /// <summary>
     /// Dialogue holder reference
     /// </summary>
