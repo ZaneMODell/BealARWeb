@@ -112,6 +112,11 @@ public class ImageTrackingObjectManagerWeb : MonoBehaviour
             m_ModelViewManager.SetModel(modelObject, resourceManager.rotationOffsets[plantName]);
         }
     }
+
+    public void SetTestText(string text)
+    {
+        testText.text = text;
+    }
     #endregion
     #endregion
 }
